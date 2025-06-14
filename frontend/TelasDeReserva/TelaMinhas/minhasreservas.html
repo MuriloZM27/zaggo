@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Meus Campos Reservados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="campos-reservados">
+  <header>
+    <div class="logo">ZAGGO <span class="bola">⚽</span></div>
+    <nav>
+      <a href="../../TelaInicial/index.html">Home</a>
+      <a href="../TelaListadeCampos/listadecampos.html">Campos</a>
+      <a href="minhasreservas.html">Meus Reservados</a>
+      <a href="../TelaReservaIndividual/reserva-individual.html">Reservar</a>
+      <a href="../../TelaCadastro/login-cadastro.html">Cadastro/Login</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="campos-reservados-container">
+      <h1>Campos Reservados</h1>
+      <div class="card-reserva">
+        <h3>Campo Zona 7</h3>
+        <p><strong>Data:</strong> 20/06/2025</p>
+        <p><strong>Horário:</strong> 09h - 10h</p>
+        <p><strong>Tipo:</strong> Fut7</p>
+        <button onclick="cancelarReserva(this)">Cancelar Reserva</button>
+      </div>
+
+      <div class="card-reserva">
+        <h3>Arena Central</h3>
+        <p><strong>Data:</strong> 25/06/2025</p>
+        <p><strong>Horário:</strong> 15h - 16h</p>
+        <p><strong>Tipo:</strong> Campo</p>
+        <button onclick="cancelarReserva(this)">Cancelar Reserva</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function cancelarReserva(botao) {
+      const card = botao.closest(".card-reserva");
+      const nomeCampo = card.querySelector("h3").innerText;
+      if (confirm(`Deseja cancelar a reserva de ${nomeCampo}?`)) {
+        card.remove();
+        alert("Reserva cancelada com sucesso.");
+      }
+    }
+  </script>
+</body>
+</html>

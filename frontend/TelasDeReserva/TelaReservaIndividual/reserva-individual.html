@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Reservar Campo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="reserva-campo">
+  <header>
+    <div class="logo">ZAGGO <span class="bola">⚽</span></div>
+    <nav>
+      <a href="../../TelaInicial/index.html">Home</a>
+      <a href="../TelaListadeCampos/listadecampos.html">Campos</a>
+      <a href="../TelaMinhas/minhasreservas.html">Meus Reservados</a>
+      <a href="reserva-individual.html">Reservar</a>
+      <a href="../../TelaCadastro/login-cadastro.html">Cadastro/Login</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="reserva-container">
+      <h1>Reserva de Campo</h1>
+
+      <div class="info-campo">
+        <p><strong>Nome do Campo:</strong> Campo Zona 7</p>
+        <p><strong>Tipo:</strong> Fut7</p>
+        <p><strong>Localização:</strong> Zona 7</p>
+        <p><strong>Capacidade:</strong> 14 pessoas</p>
+        <p><strong>Horário de Funcionamento:</strong> 08h - 22h</p>
+      </div>
+
+      <form onsubmit="return reservarCampo(event)">
+        <label for="data">Data da Reserva:</label>
+        <input type="date" id="data" required>
+
+        <label for="hora-inicio">Horário de Início:</label>
+        <input type="time" id="hora-inicio" required>
+
+        <label for="hora-fim">Horário de Término:</label>
+        <input type="time" id="hora-fim" required>
+
+        <button type="submit">Confirmar Reserva</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    function reservarCampo(event) {
+      event.preventDefault();
+      const data = document.getElementById("data").value;
+      const inicio = document.getElementById("hora-inicio").value;
+      const fim = document.getElementById("hora-fim").value;
+
+      if (inicio >= fim) {
+        alert("O horário de início deve ser menor que o de término.");
+        return;
+      }
+
+      alert(`Reserva confirmada para o dia ${data}, das ${inicio} às ${fim}.`);
+      // Aqui você pode chamar uma API ou salvar os dados no banco
+    }
+  </script>
+</body>
+</html>

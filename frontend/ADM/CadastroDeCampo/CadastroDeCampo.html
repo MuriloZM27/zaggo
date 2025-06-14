@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Cadastro de Campo (ADM)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cadastro-campo">
+  <header>
+    <div class="logo">ZAGGO ⚽</div>
+    <nav>
+      <a href="../ListagemUsuarios/ListagemUsuarios.html">Listagem de Usuários</a>
+      <a href="CadastroDeCampo.html">Cadastro de Campo</a>
+      <a href="../ConfiguracaoSistema/ConfiguracaoSistema.html">Configurações do Sistema</a>
+      <a href="../../TelaInicial/index.html">Sair</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cadastro-container">
+      <h1>Cadastro de Campo</h1>
+      <form>
+        <div class="form-linha">
+          <label for="nome">Nome do Campo:</label>
+          <input type="text" id="nome" name="nome" value="Arena 1" required>
+        </div>
+
+        <div class="form-linha">
+          <label for="tipo">Tipo de Esporte:</label>
+          <div class="botoes-tipo">
+            <input type="radio" id="fut7" name="tipo" value="fut7" checked>
+            <label for="fut7">FUT7</label>
+            <input type="radio" id="campo" name="tipo" value="campo">
+            <label for="campo">CAMPO</label>
+            <input type="radio" id="futsal" name="tipo" value="futsal">
+            <label for="futsal">FUTSAL</label>
+          </div>
+        </div>
+
+        <div class="form-linha">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" value="Rua Hematita, 88" required>
+        </div>
+
+        <div class="form-linha">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" value="Jardim Real" required>
+        </div>
+
+        <div class="form-linha">
+          <label for="capacidade">Capacidade (Pessoas):</label>
+          <input type="number" id="capacidade" name="capacidade" value="14" required>
+        </div>
+
+        <div class="form-linha">
+          <label for="horario">Horário de Funcionamento:</label>
+          <input type="text" id="horario" name="horario" placeholder="De __:__ Até __:__">
+        </div>
+
+        <div class="form-linha">
+          <label for="imagem">Upload (Imagem):</label>
+          <input type="file" id="imagem" name="imagem" accept="image/*">
+        </div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

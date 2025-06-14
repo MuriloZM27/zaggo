@@ -1,0 +1,114 @@
+body.lista-campos {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e6f4ea;
+  color: #1b5e20;
+}
+
+/* Header com logo e navegação */
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  margin-right: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #1b5e20;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Texto de introdução */
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+/* Galeria de campos */
+.galeria-campos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card de cada campo */
+.campo-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.campo-card:hover {
+  transform: scale(1.02);
+}
+
+.campo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h3 {
+  margin: 0 0 10px;
+  color: #1b5e20;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.info button {
+  background-color: #43a047;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.info button:hover {
+  background-color: #2e7d32;
+}

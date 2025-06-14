@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Campos Disponíveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lista-campos">
+
+  <header>
+    <div class="logo">ZAGGO <span class="bola">⚽</span></div>
+    <nav>
+      <a href="../../TelaInicial/index.html">Home</a>
+      <a href="listadecampos.html">Campos</a>
+      <a href="../TelaMinhas/minhasreservas.html">Meus Reservados</a>
+      <a href="../TelaReservaIndividual/reserva-individual.html">Reservar</a>
+      <a href="../../TelaCadastro/login-cadastro.html">Cadastro/Login</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Escolha seu Campo</h1>
+      <p>Confira os campos disponíveis para reserva:</p>
+    </section>
+
+    <section class="galeria-campos">
+      <div class="campo-card">
+        <img src="img/campo1.jpg" alt="Campo Zona 7">
+        <div class="info">
+          <h3>Campo Zona 7</h3>
+          <p>Fut7 - Zona 7</p>
+          <p>08h - 22h</p>
+          <button onclick="irPara()">Reservar</button>
+        </div>
+      </div>
+
+      <div class="campo-card">
+        <img src="img/campo2.jpg" alt="Arena Central">
+        <div class="info">
+          <h3>Arena Central</h3>
+          <p>Campo - Centro</p>
+          <p>07h - 21h</p>
+          <button onclick="irPara('../TelaReservaCampo/index.html')">Reservar</button>
+        </div>
+      </div>
+
+      <div class="campo-card">
+        <img src="img/campo3.jpg" alt="Quadra Jardim Real">
+        <div class="info">
+          <h3>Quadra Jardim Real</h3>
+          <p>Futsal - Jardim Real</p>
+          <p>09h - 23h</p>
+          <button onclick="irPara('../TelaReservaCampo/index.html')">Reservar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function irPara(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
+
+</body>
+</html>

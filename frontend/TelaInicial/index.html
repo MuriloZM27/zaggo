@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+  <header>
+    <div class="logo">ZAGGO <span class="bola">⚽</span></div>
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="../TelasDeReserva/TelaListadeCampos/listadecampos.html">Campos</a>
+  <a href="../TelasDeReserva/TelaMinhas/minhasreservas.html">Meus Reservados</a>
+  <a href="../TelasDeReserva/TelaReservaIndividual/reserva-individual.html">Reservar</a>
+  <a href="../TelaCadastro/login-cadastro.html">Cadastro/Login</a>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="boas-vindas">
+      <h1>Bem-vindo ao sistema de reservas de campos públicos!</h1>
+      <p>Encontre o campo ideal para sua próxima partida em Maringá.</p>
+    </section>
+
+    <section class="filtros">
+      <h2>Pesquisar Campos</h2>
+      <form>
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Ex: Zona 7">
+
+        <label for="tipo">Tipo de Campo:</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos</option>
+          <option value="fut7">Fut7</option>
+          <option value="campo">Campo</option>
+          <option value="futsal">Futsal</option>
+        </select>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data">
+
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section class="campos-destaque">
+      <h2>Campos em Destaque</h2>
+      <div class="campo">
+        <h3>Campo Zona 7</h3>
+        <p>Tipo: Fut7 | Localização: Zona 7</p>
+        <p>Funcionamento: 08h - 22h</p>
+        <button onclick="irPara('reserva.html')">Reservar</button>
+      </div>
+      <div class="campo">
+        <h3>Arena Central</h3>
+        <p>Tipo: Campo | Localização: Centro</p>
+        <p>Funcionamento: 07h - 21h</p>
+        <button onclick="irPara('reserva.html')">Reservar</button>
+      </div>
+      <div class="campo">
+        <h3>Quadra do Jardim Real</h3>
+        <p>Tipo: Futsal | Localização: Jardim Real</p>
+        <p>Funcionamento: 09h - 23h</p>
+        <button onclick="irPara('reserva.html')">Reservar</button>
+      </div>
+    </section>
+
+    <section class="resultados">
+      <h2>Últimos Resultados dos seus Jogos</h2>
+      <div class="jogo">
+        <p><strong>🏟️ Campo 01</strong> | 14/06/2025</p>
+        <p>Time 1 <span class="placar">2</span> x <span class="placar">0</span> Time 2</p>
+      </div>
+      <div class="jogo">
+        <p><strong>🏟️ Campo 03</strong> | 10/06/2025</p>
+        <p>Time 3 <span class="placar">3</span> x <span class="placar">3</span> Time 4</p>
+      </div>
+      <div class="jogo">
+        <p><strong>🏟️ Campo 02</strong> | 05/06/2025</p>
+        <p>Time 5 <span class="placar">1</span> x <span class="placar">2</span> Time 6</p>
+      </div>
+
+      <div class="botoes">
+        <button onclick="irPara('reserva.html')">Reservar Agora</button>
+        <button onclick="irPara('historico.html')">Ver Histórico Completo</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function irPara(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
+</body>
+</html>
+

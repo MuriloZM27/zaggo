@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAGGO - Configurações do Sistema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="configuracoes-sistema">
+  <header>
+    <div class="logo">ZAGGO ⚙️</div>
+    <nav>
+      <a href="../ListagemUsuarios/ListagemUsuarios.html">Listagem de Usuários</a>
+      <a href="../CadastroDeCampo/CadastroDeCampo.html">Cadastro de Campo</a>
+      <a href="ConfiguracaoSistema.html">Configurações do Sistema</a>
+      <a href="../../TelaInicial/index.html">Sair</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="config-container">
+      <h1>Configurações do Sistema</h1>
+
+      <form>
+        <div class="linha">
+          <label>Definir Horários Padrão:</label>
+          <input type="text" placeholder="De __:__  Até __:__">
+        </div>
+
+        <div class="linha">
+          <label for="max-reservas">Número Máximo de Reservas por Usuário:</label>
+          <input type="range" id="max-reservas" name="max-reservas" min="1" max="20" value="13">
+          <span id="valor-range">13</span>
+        </div>
+
+        <div class="linha">
+          <label>Reservas Online:</label>
+          <input type="checkbox" checked>
+          <label>Desabilitar</label>
+        </div>
+
+        <div class="campos-lista">
+          <div class="campo-box">
+            <div class="imagem"></div>
+            <p>Campo 01</p>
+            <input type="checkbox">
+            <label>Desabilitar</label>
+          </div>
+
+          <div class="campo-box">
+            <div class="imagem"></div>
+            <p>Campo 02</p>
+            <input type="checkbox">
+            <label>Desabilitar</label>
+          </div>
+
+          <div class="campo-box">
+            <div class="imagem"></div>
+            <p>Campo 03</p>
+            <input type="checkbox">
+            <label>Desabilitar</label>
+          </div>
+        </div>
+
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const range = document.getElementById("max-reservas");
+    const valor = document.getElementById("valor-range");
+    range.addEventListener("input", () => {
+      valor.textContent = range.value;
+    });
+  </script>
+</body>
+</html>
